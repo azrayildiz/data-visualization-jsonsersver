@@ -8,11 +8,21 @@
 		<title>Machine 1</title>
 	</head>
 	<body>
-		<header>
-			<a href="/allmachines.html">Dashboard</a>
-			<a href="/machines.html">Machines</a>
-			<a href="/measurements.html">Measurements</a>
-		</header>
+		<div id="main">
+			<nav>
+				<input type="checkbox" id="check" />
+				<label for="check" class="checkbtn">
+					<i class="fas fa-bars"></i>
+				</label>
+				<ul>
+					<img src="/CGI_logo_color.svg" alt="logo" width="150" height="80" />
+					<li><a class="active" href="#">Dashboard</a></li>
+					<li><a href="/machines.html">Machines</a></li>
+					<li><a href="/measurements.html">Measurements</a></li>
+					<li><a href="/index.html">Logout</a></li>
+				</ul>
+			</nav>
+		</div>
 		<h1>Machine 1</h1>
 
 		<script src="js/machine-1.js"></script>
