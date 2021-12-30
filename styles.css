@@ -8,6 +8,16 @@
 body {
 	font-family: verdana;
 }
+.container {
+	width: 90%;
+}
+h1 {
+	text-align: center;
+	font-size: 46px;
+}
+#canvas {
+	width: 100%;
+}
 #main {
 	width: 100%;
 	height: 100vh;
