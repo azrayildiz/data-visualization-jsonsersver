@@ -32,7 +32,7 @@ async function getChart() {
 			],
 			datasets: [
 				{
-					label: 'Machine 1',
+					label: ['Machine 1', 'Machine 2', 'Machine 3', 'Machine 4', 'Machine 5'],
 					data: data.timeStamp,
 					fill: false,
 					backgroundColor: 'transparent',
