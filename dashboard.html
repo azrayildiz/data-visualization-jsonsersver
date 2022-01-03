@@ -4,7 +4,8 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="styles.css" />
+		<link rel="stylesheet" href="./dashboard.css" />
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
 
 		<!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
 		<title>Admin - Dashboard</title>
@@ -19,7 +20,7 @@
 				<ul>
 					<img src="/CGI_logo_color.svg" alt="logo" width="150" height="80" />
 					<li><a class="active" href="#">Dashboard</a></li>
-					<li><a href="/machines.html">Machines</a></li>
+					<li><a href="/dashboard.html">Machines</a></li>
 					<li><a href="/measurements.html">Measurements</a></li>
 					<li><a href="/index.html">Logout</a></li>
 				</ul>
@@ -35,11 +36,16 @@
 			<div class="container">
 				<h1>Data Visualization</h1>
 				<div>
-					<canvas id="canvas" width="400" height="400"></canvas>
+					<div class="grid-container">
+						<canvas id="canvas"></canvas>
+					</div>
+					<div>
+						<canvas id="canvas"></canvas>
+					</div>
 				</div>
 			</div>
 		</div>
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
-		<script src="/js/allmachines.js"></script>
+		<!-- <script src="/js/allmachines.js"></script> -->
 	</body>
 </html>

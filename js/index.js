@@ -6,8 +6,8 @@ const container = document.querySelector('.datas')
 const renderPosts = async () => {
 	let uri = 'http://localhost:3000/events'
 	//fetch resources from the endpoint, send json server data back // get data with post
-	const res = await fetch(uri)
-	const events = await res.json()
+	const response = await fetch(uri)
+	const events = await response.json()
 	console.log(events)
 
 	let template = ''
