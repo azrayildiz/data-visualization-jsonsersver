@@ -4,28 +4,30 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
 		<link rel="stylesheet" href="styles.css" />
+		<script src="./js/machine-5.js"></script>
 		<title>Machine 5</title>
 	</head>
 	<body>
-		<div id="main">
-			<nav>
-				<input type="checkbox" id="check" />
-				<label for="check" class="checkbtn">
-					<i class="fas fa-bars"></i>
-				</label>
-				<ul>
-					<img src="/CGI_logo_color.svg" alt="logo" width="150" height="80" />
-					<li><a class="active" href="#">Dashboard</a></li>
-					<li><a href="/machines.html">Machines</a></li>
-					<li><a href="/measurements.html">Measurements</a></li>
-					<li><a href="/index.html">Logout</a></li>
-				</ul>
-			</nav>
+			<div class="header">
+			<img src="./CGI_logo_color.svg" class="logo" width="150" height="80"></img>
+			<div class="header-right">
+				<a href="/dashboard.html">Dashboard</a>
+				<a class="active" href="#">Machines</a>
+				<a href="/measurements.html">Measurements</a>
+				<a href="/dashboard.html">Logout</a>
+			</div>
 		</div>
-		<h1>Machine 5</h1>
-
-		<script src="js/machine-5.js"></script>
+		<br>
+		<br>
+		<div class="container">
+			<br>
+			<br>
+			<h1>Machine-5</h1>
+			<br>
+			<br>
+					<canvas id="chart"></canvas>
+		</div>
 	</body>
 </html>

@@ -9,13 +9,18 @@ body {
 	font-family: verdana;
 }
 .container {
-	width: 90%;
+	width: 95%;
 }
 
 /* Style the header links */
+.header {
+	overflow: hidden;
+	background-color: #3b3939;
+	padding: 20px 10px;
+}
 .header a {
 	float: left;
-	color: black;
+	color: rgb(252, 244, 244);
 	text-align: center;
 	padding: 12px;
 	text-decoration: none;
@@ -33,8 +38,7 @@ h1 {
 }
 canvas {
 	border: 1px solid black;
-	width: 800px;
-	height: 400px;
+	width: 100%;
 }
 /* #main {
 	width: 100%;
@@ -68,7 +72,7 @@ nav ul li a {
 } */
 a.active,
 a:hover {
-	background: #454646;
+	background: #d61e2e;
 	transition: 0.5s;
 }
 /* .checkbtn {
@@ -78,11 +82,28 @@ a:hover {
 	line-height: 80px;
 	margin-right: 40px;
 	cursor: pointer;
-	display: none;
 }
-#check {
+#checkbtn {
 	display: none;
 } */
+.flex-container {
+	width: 100%;
+	height: 400px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #757373;
+	text-decoration-color: rgb(252, 244, 244);
+}
+.flex-container > div {
+	background-color: #f1f1f1;
+	width: 100%;
+	height: 350px;
+	margin: 20px;
+	text-align: center;
+	line-height: 95px;
+	font-size: 30px;
+}
 @media (max-width: 952px) {
 	label.logo {
 		font-size: 30px;
@@ -93,9 +114,9 @@ a:hover {
 	}
 }
 @media (max-width: 858px) {
-	/* .checkbtn {
+	.checkbtn {
 		display: block;
-	} */
+	}
 	.header a {
 		position: fixed;
 		width: 100%;
@@ -116,7 +137,7 @@ a:hover {
 		background: none;
 		color: black;
 	}
-	/* #check:checked ~ ul {
+	#check:checked {
 		left: 0;
-	} */
+	}
 }

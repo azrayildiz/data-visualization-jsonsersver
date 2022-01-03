@@ -1,4 +1,4 @@
-//js for allmachines.html
+//js for dashboard.html
 getChart()
 
 // Chart element

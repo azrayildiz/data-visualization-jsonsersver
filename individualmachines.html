@@ -5,31 +5,45 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="styles.css" />
-		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+		<!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+		<script src="js/machine-1.js"></script>
+		<link rel="stylesheet" href="styles.css" />
 		<title>Data Visualization</title>
 	</head>
 	<body>
-		<div id="main">
-			<nav>
-				<input type="checkbox" id="check" />
-				<label for="check" class="checkbtn">
-					<i class="fas fa-bars"></i>
-				</label>
-				<ul>
-					<img src="/CGI_logo_color.svg" alt="logo" width="150" height="80" />
-					<li><a class="active" href="#">Dashboard</a></li>
-					<li><a href="/machines.html">Machines</a></li>
-					<li><a href="/measurements.html">Measurements</a></li>
-					<li><a href="/index.html">Logout</a></li>
-				</ul>
-			</nav>
+			<div class="header">
+			<img src="./CGI_logo_color.svg" class="logo" width="150" height="80"></img>
+			<div class="header-right">
+				<a href="#dashboard">Dashboard</a>
+					<a class="active" href="#">Machines</a>
+				<a href="/measurements.html">Measurements</a>
+				<a href="/dashboard.html">Logout</a>
+			</div>
 		</div>
+		<br>
+		<br>
 		<h1>Temperature of individual Machines</h1>
-		<a href="/machine-1.html">Machine 1</a>
-		<a href="/machine-2.html">Machine 2</a>
-		<a href="/machine-3.html">Machine 3</a>
-		<a href="/machine-4.html">Machine 4</a>
-		<a href="/machine-5.html">Machine 5</a>
+		<br>
+		<br>
+
+		<div class="flex-container">
+			<div>
+				<a href="/machine-1.html">Machine 1</a>
+			</div>
+			<div>
+				<a href="/machine-2.html">Machine 2</a>
+			</div>
+			<div>
+				<a href="/machine-3.html">Machine 3</a>
+			</div>
+			<div>
+				<a href="/machine-4.html">Machine 4</a>
+			</div>
+			<div>
+				<a href="/machine-5.html">Machine 5</a>
+			</div>
+		</div>
 
 		<script src="js/individualmachine.js"></script>
 	</body>

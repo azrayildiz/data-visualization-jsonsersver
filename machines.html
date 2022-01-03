@@ -4,35 +4,36 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles.css" />
 		<!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
 		<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
-		<script src="js/measurements.js"></script>
+		<script src="js/machines.js"></script>
 		<link rel="stylesheet" href="styles.css" />
-		<title>Measurements</title>
+		<title>Admin - Dashboard</title>
 	</head>
 	<body>
-			<div class="header">
+		<div class="header">
 			<img src="./CGI_logo_color.svg" class="logo" width="150" height="80"></img>
 			<div class="header-right">
-				<a href="/dashboard.html">Dashboard</a>
-				<a href="/machines.html">Machines</a>
-				<a class="active" href="#dashboard">Measurements</a>
-				<a href="/dashboard.html">Logout</a>
-				<!-- <nav>
-					<input type="checkbox" id="check" />
-					<label for="check" class="checkbtn">
-						<i class="fas fa-bars"></i>
-					</label>
-				</nav> -->
+				<a href="./dashboard.html">Dashboard</a>
+				<a class="active" href="#">Machines</a>
+				<a href="/measurements.html">Measurements</a>
+				<a href="/machines.html">Logout</a>
 			</div>
 		</div>
-			<br>
-			<br>
-			<div class="container">
-				<h1>Measurements</h1>
-				<br>
-				<br>
-					<canvas id="chart"></canvas>
+		<br>
+		<br>
+		<h1>Machines</h1>
+		<br>
+		<br>
+		<div class="flex-container">
+			<div>
+				<a href="/dashboard.html">Temperature of all Machines</a>
 			</div>
+			<div>
+				<a href="/individualmachines.html">Temperature of individual Machines</a>
+			</div>
+		</div>
+
 	</body>
 </html>
