@@ -81,7 +81,7 @@ async function getData() {
 	let machine_3 = []
 	let machine_4 = []
 	let machine_5 = []
-	let criticeTemperate = []
+	let criticalTemperate = []
 
 	const response = await fetch('http://localhost:3000/events')
 
@@ -89,7 +89,7 @@ async function getData() {
 
 	data.map((datas) => {
 		if (datas.temperature > 90) {
-			criticeTemperate.push(datas)
+			criticalTemperate.push(datas)
 		} else if (datas.machine_name === 'machine-1') {
 			machine_1.push(datas)
 		} else if (datas.machine_name === 'machine-2') {
@@ -102,7 +102,7 @@ async function getData() {
 			machine_5.push(datas)
 		}
 	})
-	console.log(criticeTemperate)
+	console.log(criticalTemperate)
 
 	//machine-1
 	const timestamp_1 = machine_1.map((item) => {
