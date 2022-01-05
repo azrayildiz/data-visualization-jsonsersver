@@ -4,52 +4,28 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
 		<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
-		<script src="./js/dashboard.js"></script>
+		<script src="./js/critical-temperature.js"></script>
 		<link rel="stylesheet" href="styles.css" />
-		<title>All Machines</title>
+		<title>Critical Temperatures</title>
 	</head>
 	<body>
 		<div class="header">
-				<nav>
-					<input type="checkbox" id="check" />
-					<label for="check" class="checkbtn">
-						<i class="fas fa-bars"></i>
-					</label>
-				</nav>
 			<img src="./CGI_logo_color.svg" class="logo" width="150" height="80"></img>
 			<div class="header-right">
-				<a class="active" href="#dashboard">Dashboard</a>
-				<a href="/machines.html">Machines</a>
+				<a href="/dashboard.html">Dashboard</a>
+				<a class="active"href="/machines.html">Machines</a>
 				<a href="/measurements.html">Measurements</a>
 				<a href="/dashboard.html">Logout</a>
 
 			</div>
 		</div>
-
-		<!-- <div id="main">
-			<nav>
-				<input type="checkbox" id="check" />
-				<label for="check" class="checkbtn">
-					<i class="fas fa-bars"></i>
-				</label>
-				<ul>
-					<img src="/CGI_logo_color.svg" alt="logo" width="150" height="80" />
-					<li><a class="active" href="#">Dashboard</a></li>
-					<li><a href="/dashboard.html">Machines</a></li>
-					<li><a href="/measurements.html">Measurements</a></li>
-					<li><a href="/machines.html">Logout</a></li>
-				</ul>
-			</nav>
-		</div> -->
 			<br>
 			<br>
-			<div class="container">
-			<h1>Critical Temperature</h1>
-				<br>
-				<br>
+				<h1>Critical Temperatures</h1>
+			<br>
+			<br>
 					<canvas id="chart"></canvas>
-			</div>
+			</button>
 	</body>
 </html>
