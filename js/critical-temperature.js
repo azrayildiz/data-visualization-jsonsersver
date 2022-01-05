@@ -1,12 +1,11 @@
-//js for dashboard.html
 getChart()
-
+// get chart
 async function getChart() {
 	const data = await getData()
 	console.log(data)
 
 	const ctx = document.getElementById('chart').getContext('2d')
-
+	//drawing chart
 	const myChart = new Chart(ctx, {
 		type: 'line',
 		data: {
@@ -15,14 +14,14 @@ async function getChart() {
 				{
 					label: 'Critical Temperatures',
 					labels: data.timestamp_90,
-					data: data.temperature_90,
+					data: data.temperature_90, // data temperature
 					backgroundColor: 'transparent',
 					borderColor: 'red',
 					borderWidth: 4,
 				},
 			],
 		},
-
+		// callback function
 		options: {
 			elements: {
 				line: {
@@ -44,7 +43,7 @@ async function getChart() {
 		},
 	})
 }
-
+// put getData, use async and await getData before chart is going to wait data is done before it does rest of staff
 async function getData() {
 	let machine_1 = []
 	let machine_2 = []
@@ -158,7 +157,7 @@ async function getData() {
 	const temperature_5 = machine_5.map((item) => {
 		return item.temperature
 	})
-	//critical temperatures
+	//critical temperatures > 90
 	const timestamp_90 = criticalTemperate.map((item) => {
 		return item.timestamp
 	})
