@@ -1,7 +1,5 @@
-//js for dashboard.html
 getChart()
 
-// Chart element
 async function getChart() {
 	const data = await getData()
 	console.log(data)
@@ -18,7 +16,7 @@ async function getChart() {
 					labels: data.timestamp_1,
 					data: data.temperature_1,
 					backgroundColor: 'transparent',
-					borderColor: 'red',
+					borderColor: 'maroon',
 					borderWidth: 4,
 				},
 				{
@@ -48,6 +46,14 @@ async function getChart() {
 					data: data.temperature_5,
 					backgroundColor: 'transparent',
 					borderColor: 'purple',
+					borderWidth: 4,
+				},
+				{
+					label: 'Critical Temperatures',
+					labels: data.timestamp_90,
+					data: data.temperature_90,
+					backgroundColor: 'transparent',
+					borderColor: 'red',
 					borderWidth: 4,
 				},
 			],
@@ -188,6 +194,22 @@ async function getData() {
 	const temperature_5 = machine_5.map((item) => {
 		return item.temperature
 	})
+	//critical temperatures
+	const timestamp_90 = criticalTemperate.map((item) => {
+		return item.timestamp
+	})
+
+	const machineId_90 = criticalTemperate.map((item) => {
+		return item.machine_id
+	})
+
+	const machineName_90 = criticalTemperate.map((item) => {
+		return item.machine_name
+	})
+
+	const temperature_90 = criticalTemperate.map((item) => {
+		return item.temperature
+	})
 
 	return {
 		timestamp_1,
@@ -200,7 +222,7 @@ async function getData() {
 		temperature_4,
 		timestamp_5,
 		temperature_5,
+		timestamp_90,
+		temperature_90,
 	}
 }
-
-//if else 90 grad

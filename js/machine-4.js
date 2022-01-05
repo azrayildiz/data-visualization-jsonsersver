@@ -1,7 +1,5 @@
-//js for dashboard.html
 getChart()
 
-// Chart element
 async function getChart() {
 	const data = await getData()
 	console.log(data)
@@ -11,7 +9,7 @@ async function getChart() {
 	const myChart = new Chart(ctx, {
 		type: 'line',
 		data: {
-			labels: data.timestamp_4,
+			labels: data.timestamp_1,
 			datasets: [
 				{
 					label: 'Machine 4',
@@ -51,7 +49,7 @@ async function getData() {
 	let machine_3 = []
 	let machine_4 = []
 	let machine_5 = []
-	let criticeTemperate = []
+	let criticalTemperate = []
 
 	const response = await fetch('http://localhost:3000/events')
 
@@ -59,7 +57,7 @@ async function getData() {
 
 	data.map((datas) => {
 		if (datas.temperature > 90) {
-			criticeTemperate.push(datas)
+			criticalTemperate.push(datas)
 		} else if (datas.machine_name === 'machine-1') {
 			machine_1.push(datas)
 		} else if (datas.machine_name === 'machine-2') {
@@ -72,7 +70,7 @@ async function getData() {
 			machine_5.push(datas)
 		}
 	})
-	console.log(criticeTemperate)
+	console.log(criticalTemperate)
 
 	//machine-1
 	const timestamp_1 = machine_1.map((item) => {
@@ -158,6 +156,22 @@ async function getData() {
 	const temperature_5 = machine_5.map((item) => {
 		return item.temperature
 	})
+	//critical temperatures
+	const timestamp_90 = criticalTemperate.map((item) => {
+		return item.timestamp
+	})
+
+	const machineId_90 = criticalTemperate.map((item) => {
+		return item.machine_id
+	})
+
+	const machineName_90 = criticalTemperate.map((item) => {
+		return item.machine_name
+	})
+
+	const temperature_90 = criticalTemperate.map((item) => {
+		return item.temperature
+	})
 
 	return {
 		timestamp_1,
@@ -170,5 +184,7 @@ async function getData() {
 		temperature_4,
 		timestamp_5,
 		temperature_5,
+		timestamp_90,
+		temperature_90,
 	}
 }
