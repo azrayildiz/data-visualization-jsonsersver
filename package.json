@@ -1,0 +1,19 @@
+{
+	"name": "data-visualization-jsonserver",
+	"version": "1.0.0",
+	"description": "# LICENCE",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/azrayildiz/data-visualization-jsonserver.git"
+	},
+	"author": "Dr. Fatma Azra Yildiz",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/azrayildiz/data-visualization-jsonserver/issues"
+	},
+	"homepage": "https://github.com/azrayildiz/data-visualization-jsonserver#readme"
+}
