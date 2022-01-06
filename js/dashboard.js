@@ -17,7 +17,7 @@ async function getChart() {
 					data: data.temperature_1,
 					backgroundColor: 'transparent',
 					borderColor: 'maroon',
-					borderWidth: 4,
+					borderWidth: 2,
 				},
 				{
 					label: 'Machine 2',
@@ -25,28 +25,28 @@ async function getChart() {
 					data: data.temperature_2,
 					backgroundColor: 'transparent',
 					borderColor: 'green',
-					borderWidth: 4,
+					borderWidth: 2,
 				},
 				{
 					label: 'Machine 3',
 					data: data.temperature_3,
 					backgroundColor: 'transparent',
 					borderColor: 'blue',
-					borderWidth: 4,
+					borderWidth: 2,
 				},
 				{
 					label: 'Machine 4',
 					data: data.temperature_4,
 					backgroundColor: 'transparent',
 					borderColor: 'orange',
-					borderWidth: 4,
+					borderWidth: 2,
 				},
 				{
 					label: 'Machine 5',
 					data: data.temperature_5,
 					backgroundColor: 'transparent',
 					borderColor: 'purple',
-					borderWidth: 4,
+					borderWidth: 2,
 				},
 				{
 					label: 'Critical Temperatures',
@@ -54,7 +54,7 @@ async function getChart() {
 					data: data.temperature_90,
 					backgroundColor: 'transparent',
 					borderColor: 'red',
-					borderWidth: 4,
+					borderWidth: 1,
 				},
 			],
 		},
@@ -108,21 +108,11 @@ async function getData() {
 			machine_5.push(datas)
 		}
 	})
-	console.log(criticalTemperate)
 
 	//machine-1
 	const timestamp_1 = machine_1.map((item) => {
 		return item.timestamp
 	})
-
-	const machineId_1 = machine_1.map((item) => {
-		return item.machine_id
-	})
-
-	const machineName_1 = machine_1.map((item) => {
-		return item.machine_name
-	})
-
 	const temperature_1 = machine_1.map((item) => {
 		return item.temperature
 	})
@@ -131,15 +121,6 @@ async function getData() {
 	const timestamp_2 = machine_2.map((item) => {
 		return item.timestamp
 	})
-
-	const machineId_2 = machine_2.map((item) => {
-		return item.machine_id
-	})
-
-	const machineName_2 = machine_2.map((item) => {
-		return item.machine_name
-	})
-
 	const temperature_2 = machine_2.map((item) => {
 		return item.temperature
 	})
@@ -147,14 +128,6 @@ async function getData() {
 	//machine-3
 	const timestamp_3 = machine_3.map((item) => {
 		return item.timestamp
-	})
-
-	const machineId_3 = machine_3.map((item) => {
-		return item.machine_id
-	})
-
-	const machineName_3 = machine_3.map((item) => {
-		return item.machine_name
 	})
 
 	const temperature_3 = machine_3.map((item) => {
@@ -166,14 +139,6 @@ async function getData() {
 		return item.timestamp
 	})
 
-	const machineId_4 = machine_4.map((item) => {
-		return item.machine_id
-	})
-
-	const machineName_4 = machine_4.map((item) => {
-		return item.machine_name
-	})
-
 	const temperature_4 = machine_4.map((item) => {
 		return item.temperature
 	})
@@ -182,29 +147,12 @@ async function getData() {
 	const timestamp_5 = machine_5.map((item) => {
 		return item.timestamp
 	})
-
-	const machineId_5 = machine_5.map((item) => {
-		return item.machine_id
-	})
-
-	const machineName_5 = machine_5.map((item) => {
-		return item.machine_name
-	})
-
 	const temperature_5 = machine_5.map((item) => {
 		return item.temperature
 	})
 	//critical temperatures
 	const timestamp_90 = criticalTemperate.map((item) => {
 		return item.timestamp
-	})
-
-	const machineId_90 = criticalTemperate.map((item) => {
-		return item.machine_id
-	})
-
-	const machineName_90 = criticalTemperate.map((item) => {
-		return item.machine_name
 	})
 
 	const temperature_90 = criticalTemperate.map((item) => {
