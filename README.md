@@ -1,5 +1,14 @@
 # data-visualization-jsonsersver
 
+- Install JSON Server
+  npm install -g json-server
+
+- Create a db.json file with some datas
+- Start JSON Server
+  json-server --watch db.json
+
+- If JSON Server didn't connect - reload the page(http://localhost:3000/)
+
 # LICENCE
 
 MIT License
