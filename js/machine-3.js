@@ -56,6 +56,7 @@ async function getData() {
 		}
 		return
 	})
+	machine_3 = machine_3.sort((a, b) => Date.parse(a.timestamp) - Date.parse(b.timestamp))
 
 	//machine-3
 	const timestamp_3 = machine_3.map((item) => {

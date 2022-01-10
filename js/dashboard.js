@@ -48,14 +48,6 @@ async function getChart() {
 					borderColor: 'purple',
 					borderWidth: 2,
 				},
-				{
-					label: 'Critical Temperatures',
-					labels: data.timestamp_90,
-					data: data.temperature_90,
-					backgroundColor: 'transparent',
-					borderColor: 'red',
-					borderWidth: 1,
-				},
 			],
 		},
 
@@ -67,6 +59,7 @@ async function getChart() {
 				scales: {
 					yAxes: [
 						{
+							// callback function
 							ticks: {
 								beginAtZero: true,
 								callback: function (value, index, values) {
@@ -94,9 +87,7 @@ async function getData() {
 	const data = await response.json()
 
 	data.map((datas) => {
-		if (datas.temperature > 90) {
-			criticalTemperate.push(datas)
-		} else if (datas.machine_name === 'machine-1') {
+		if (datas.machine_name === 'machine-1') {
 			machine_1.push(datas)
 		} else if (datas.machine_name === 'machine-2') {
 			machine_2.push(datas)
@@ -108,6 +99,29 @@ async function getData() {
 			machine_5.push(datas)
 		}
 	})
+
+	// const groups = machine_1.reduce((acc, m) => {
+	// 	// create a composed key: 'year-week'
+	// 	const yearWeek = `${moment(m.timestamp).year()}-${moment(m.timestamp).week()}`
+
+	// 	// add this key as a property to the result object
+	// 	if (!acc[yearWeek]) {
+	// 		acc[yearWeek] = []
+	// 	}
+
+	// 	// push the current date that belongs to the year-week calculated befor
+	// 	acc[yearWeek].push(m)
+
+	// 	return acc
+	// }, {})
+
+	// console.log(groups)
+
+	machine_1 = machine_1.sort((a, b) => Date.parse(a.timestamp) - Date.parse(b.timestamp))
+	machine_2 = machine_2.sort((a, b) => Date.parse(a.timestamp) - Date.parse(b.timestamp))
+	machine_3 = machine_3.sort((a, b) => Date.parse(a.timestamp) - Date.parse(b.timestamp))
+	machine_4 = machine_4.sort((a, b) => Date.parse(a.timestamp) - Date.parse(b.timestamp))
+	machine_5 = machine_5.sort((a, b) => Date.parse(a.timestamp) - Date.parse(b.timestamp))
 
 	//machine-1
 	const timestamp_1 = machine_1.map((item) => {
@@ -154,7 +168,6 @@ async function getData() {
 	const timestamp_90 = criticalTemperate.map((item) => {
 		return item.timestamp
 	})
-
 	const temperature_90 = criticalTemperate.map((item) => {
 		return item.temperature
 	})

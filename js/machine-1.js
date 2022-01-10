@@ -51,6 +51,7 @@ async function getChart() {
 
 async function getData() {
 	let machine_1 = []
+	console.log(machine_1)
 
 	const response = await fetch('http://localhost:3000/events')
 
@@ -62,6 +63,9 @@ async function getData() {
 		}
 		return
 	})
+
+	// sort timestamp
+	machine_1 = machine_1.sort((a, b) => Date.parse(a.timestamp) - Date.parse(b.timestamp))
 
 	//machine-1
 	const timestamp_1 = machine_1.map((item) => {
@@ -86,6 +90,7 @@ async function getData() {
 	// 	})
 	// console.log('years', years)
 	// })
+
 	return {
 		timestamp_1,
 		temperature_1,

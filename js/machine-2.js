@@ -16,7 +16,7 @@ async function getChart() {
 					labels: data.timestamp_2,
 					data: data.temperature_2,
 					backgroundColor: 'transparent',
-					borderColor: 'maroon',
+					borderColor: 'green',
 					borderWidth: 2,
 				},
 			],
@@ -57,6 +57,7 @@ async function getData() {
 		}
 		return
 	})
+	machine_2 = machine_2.sort((a, b) => Date.parse(a.timestamp) - Date.parse(b.timestamp))
 	//machine-2
 	const timestamp_2 = machine_2.map((item) => {
 		return item.timestamp

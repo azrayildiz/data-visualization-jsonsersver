@@ -57,6 +57,7 @@ async function getData() {
 		}
 		return
 	})
+	criticalTemperate = criticalTemperate.sort((a, b) => Date.parse(a.timestamp) - Date.parse(b.timestamp))
 
 	//critical temperatures > 90
 	const timestamp_90 = criticalTemperate.map((item) => {
